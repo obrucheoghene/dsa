@@ -29,3 +29,48 @@ Output: [3,4,6,16,17]
     1 <= nums.length <= 1000
     -10^6 <= nums[i] <= 10^6
 ```
+
+# Solution in C, JavaScript and Python
+
+# Code in C
+```
+int* runningSum(int* nums, int numsSize, int* returnSize){
+    int i;
+    int *result;
+
+    result = malloc(sizeof(int) * numsSize);
+    if(!result)
+    {
+         return (NULL);
+    }
+    *returnSize = numsSize;   
+    result[0] = nums[0];
+    for(i = 1; i < numsSize; i++)
+    {
+        result[i] = nums[i] + result[i - 1];
+    }
+    return (result);
+}
+```
+
+# Code in Javascript
+```
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var runningSum = function(nums) {
+    let sum = 0;
+     
+    return nums.map((num) => sum += num);
+ };
+```
+
+# Code in Python
+```
+class Solution:
+    def runningSum(self, nums: List[int]) -> List[int]:
+        for i in range(1, len(nums)):
+            nums[i] = nums[i] + nums[i - 1]
+        return nums
+```
