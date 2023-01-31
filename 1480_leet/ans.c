@@ -8,7 +8,8 @@ int* runningSum(int* nums, int numsSize, int* returnSize){
     result = malloc(sizeof(int) * numsSize);
     if(!result)
     {
-         return (NULL);
+        // Uncomment the line below
+        // return (NULL);
     }
     *returnSize = numsSize;   
     result[0] = nums[0];
