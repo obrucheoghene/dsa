@@ -41,3 +41,24 @@ Output: 12
 ```
     0 <= num <= 106
 ```
+
+**Solution in C:**
+```
+int numberOfSteps(int num){
+    int step = 0;
+
+    while (num != 0)
+    {
+        if (num % 2 == 0)
+        {
+            num = num / 2;
+        } 
+        else
+        {
+            num -= 1;
+        }
+        step += 1;
+    }
+    return (step);
+}
+```
