@@ -46,7 +46,6 @@ Explanation: Since the list has two middle nodes with values 3 and 4, we return 
  */
 
 
-
 int lenghtOfList(struct ListNode* head)
 {
     struct ListNode* temp = head;
@@ -77,4 +76,41 @@ struct ListNode* middleNode(struct ListNode* head){
 }
 
 
+```
+
+### Solution in Javascript
+```
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var middleNode = function(head) {
+    var lenght = 0;
+    var middle = 0;
+    var temp = head;
+
+    while (temp)
+    {
+        lenght++;
+        temp = temp.next;
+    }
+
+    middle = Math.floor(lenght / 2);
+    temp = head;
+
+    while (middle)
+    {
+        middle--;
+        temp = temp.next;
+    }
+    
+    return temp;
+};
 ```
