@@ -26,3 +26,5 @@ Output: [4,9,9,49,121]
     -104 <= nums[i] <= 104
     nums is sorted in non-decreasing order.
 ```
+
+# Solution
